@@ -118,16 +118,16 @@ document.getElementById("sanzorCHA").innerText = sanzor.charisma;
 
 
 function changeHP (charName, amount) {
-    let char = characters[charName];
-    let elem = document.getElementById(char.name + "HP")
+    let elem = document.getElementById(charName + "HP")
     let currHP = parseInt(elem.innerHTML);
 
     currHP += amount
 
-    elem.innerHTML = setHP(char, currHP);
+    elem.innerHTML = setHP(charName, currHP);
 }
 
-function setHP (char, hp) {
+function setHP (charName, hp) {
+    let char = characters[charName];
     if (hp > char.hitpoints){
         hp = char.hitpoints;
     }
