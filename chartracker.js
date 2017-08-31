@@ -25,71 +25,6 @@ var duria = {
     chaMod: -1,
 }
 
-document.getElementById("duriaHP").innerText = duria.hitpoints;
-document.getElementById("duriaAC").innerText = duria.ac;
-document.getElementById("duriaSPD").innerText = duria.speed;
-document.getElementById("duriaINI").innerText = "+" + duria.initiative;
-document.getElementById("duriaSTR").innerText = duria.strength;
-document.getElementById("duriaDEX").innerText = duria.dexterity;
-document.getElementById("duriaCON").innerText = duria.constitution;
-document.getElementById("duriaINT").innerText = duria.intelligence;
-document.getElementById("duriaWIS").innerText = duria.wisdom;
-document.getElementById("duriaCHA").innerText = duria.charisma;
-
-function duriaDMG1(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= 1;
-    if (duriaCurrentHP < 0){
-        duriaCurrentHP = 0;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
-function duriaDMG5(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= 5;
-    if (duriaCurrentHP < 0){
-        duriaCurrentHP = 0;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
-function duriaDMG10(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= 10;
-    if (duriaCurrentHP < 0){
-        duriaCurrentHP = 0;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
-function duriaHEAL1(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= -1;
-    if (duriaCurrentHP > duria.hitpoints){
-        duriaCurrentHP = duria.hitpoints;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
-function duriaHEAL5(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= -5;
-    if (duriaCurrentHP > duria.hitpoints){
-        duriaCurrentHP = duria.hitpoints;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
-function duriaHEAL10(){
-    var duriaCurrentHP = document.getElementById("duriaHP").innerHTML;
-    duriaCurrentHP = duriaCurrentHP -= -10;
-    if (duriaCurrentHP > duria.hitpoints){
-        duriaCurrentHP = duria.hitpoints;
-    }
-    document.getElementById("duriaHP").innerHTML = duriaCurrentHP;
-}
-
 var hood = {
     name: "Hood",
     gender: "male",
@@ -114,71 +49,6 @@ var hood = {
     wisMod: 3,
     charisma: 13,
     chaMod: 1,
-}
-
-document.getElementById("hoodHP").innerText = hood.hitpoints;
-document.getElementById("hoodAC").innerText = hood.ac;
-document.getElementById("hoodSPD").innerText = hood.speed;
-document.getElementById("hoodINI").innerText = "+" + hood.initiative;
-document.getElementById("hoodSTR").innerText = hood.strength;
-document.getElementById("hoodDEX").innerText = hood.dexterity;
-document.getElementById("hoodCON").innerText = hood.constitution;
-document.getElementById("hoodINT").innerText = hood.intelligence;
-document.getElementById("hoodWIS").innerText = hood.wisdom;
-document.getElementById("hoodCHA").innerText = hood.charisma;
-
-function hoodDMG1(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= 1;
-    if (hoodCurrentHP < 0){
-        hoodCurrentHP = 0;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
-}
-
-function hoodDMG5(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= 5;
-    if (hoodCurrentHP < 0){
-        hoodCurrentHP = 0;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
-}
-
-function hoodDMG10(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= 10;
-    if (hoodCurrentHP < 0){
-        hoodCurrentHP = 0;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
-}
-
-function hoodHEAL1(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= -1;
-    if (hoodCurrentHP > hood.hitpoints){
-        hoodCurrentHP = hood.hitpoints;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
-}
-
-function hoodHEAL5(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= -5;
-    if (hoodCurrentHP > hood.hitpoints){
-        hoodCurrentHP = hood.hitpoints;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
-}
-
-function hoodHEAL10(){
-    var hoodCurrentHP = document.getElementById("hoodHP").innerHTML;
-    hoodCurrentHP = hoodCurrentHP -= -10;
-    if (hoodCurrentHP > hood.hitpoints){
-        hoodCurrentHP = hood.hitpoints;
-    }
-    document.getElementById("hoodHP").innerHTML = hoodCurrentHP;
 }
 
 var sanzor = {
@@ -207,6 +77,34 @@ var sanzor = {
     chaMod: 2,
 }
 
+var characters = {
+    "duria" : duria,
+    "hood" : hood,
+    "sanzor" : sanzor
+}
+
+document.getElementById("duriaHP").innerText = duria.hitpoints;
+document.getElementById("duriaAC").innerText = duria.ac;
+document.getElementById("duriaSPD").innerText = duria.speed;
+document.getElementById("duriaINI").innerText = "+" + duria.initiative;
+document.getElementById("duriaSTR").innerText = duria.strength;
+document.getElementById("duriaDEX").innerText = duria.dexterity;
+document.getElementById("duriaCON").innerText = duria.constitution;
+document.getElementById("duriaINT").innerText = duria.intelligence;
+document.getElementById("duriaWIS").innerText = duria.wisdom;
+document.getElementById("duriaCHA").innerText = duria.charisma;
+
+document.getElementById("hoodHP").innerText = hood.hitpoints;
+document.getElementById("hoodAC").innerText = hood.ac;
+document.getElementById("hoodSPD").innerText = hood.speed;
+document.getElementById("hoodINI").innerText = "+" + hood.initiative;
+document.getElementById("hoodSTR").innerText = hood.strength;
+document.getElementById("hoodDEX").innerText = hood.dexterity;
+document.getElementById("hoodCON").innerText = hood.constitution;
+document.getElementById("hoodINT").innerText = hood.intelligence;
+document.getElementById("hoodWIS").innerText = hood.wisdom;
+document.getElementById("hoodCHA").innerText = hood.charisma;
+
 document.getElementById("sanzorHP").innerText = sanzor.hitpoints;
 document.getElementById("sanzorAC").innerText = sanzor.ac;
 document.getElementById("sanzorSPD").innerText = sanzor.speed;
@@ -218,56 +116,24 @@ document.getElementById("sanzorINT").innerText = sanzor.intelligence;
 document.getElementById("sanzorWIS").innerText = sanzor.wisdom;
 document.getElementById("sanzorCHA").innerText = sanzor.charisma;
 
-function sanzorDMG1(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= 1;
-    if (sanzorCurrentHP < 0){
-        sanzorCurrentHP = 0;
-    }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
+
+function changeHP (charName, amount) {
+    let char = characters[charName];
+    let elem = document.getElementById(char.name + "HP")
+    let currHP = parseInt(elem.innerHTML);
+
+    currHP += amount
+
+    elem.innerHTML = setHP(char, currHP);
 }
 
-function sanzorDMG5(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= 5;
-    if (sanzorCurrentHP < 0){
-        sanzorCurrentHP = 0;
+function setHP (char, hp) {
+    if (hp > char.hitpoints){
+        hp = char.hitpoints;
     }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
-}
 
-function sanzorDMG10(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= 10;
-    if (sanzorCurrentHP < 0){
-        sanzorCurrentHP = 0;
+    if (hp < 0) {
+        hp = 0;
     }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
-}
-
-function sanzorHEAL1(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= -1;
-    if (sanzorCurrentHP > sanzor.hitpoints){
-        sanzorCurrentHP = sanzor.hitpoints;
-    }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
-}
-
-function sanzorHEAL5(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= -5;
-    if (sanzorCurrentHP > sanzor.hitpoints){
-        sanzorCurrentHP = sanzor.hitpoints;
-    }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
-}
-
-function sanzorHEAL10(){
-    var sanzorCurrentHP = document.getElementById("sanzorHP").innerHTML;
-    sanzorCurrentHP = sanzorCurrentHP -= -10;
-    if (sanzorCurrentHP > sanzor.hitpoints){
-        sanzorCurrentHP = sanzor.hitpoints;
-    }
-    document.getElementById("sanzorHP").innerHTML = sanzorCurrentHP;
+    return hp;
 }
