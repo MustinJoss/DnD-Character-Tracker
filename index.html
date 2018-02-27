@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <title>Character Tracker</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="outRow"><!-- outter row that contains the character stat columns -->
+            <div class="textColumn"><!-- Duria's stat column -->
+                <div class="outBox">Duria Fireforge</div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="duriaHP" class="hpBox"></div><!-- Duria's HP box -->
+                        <button id="duriaHEAL1" class="button1" onclick="changeHP('duria', 1)">+1</button>
+                        <button id="duriaHEAL5" class="button1" onclick="changeHP('duria', 5)">+5</button>
+                        <button id="duriaHEAL10" class="button1" onclick="changeHP('duria', 10)">+10</button>
+                        <button id="duriaDMG1" class="button2" onclick="changeHP('duria', -1)">-1</button>
+                        <button id="duriaDMG5" class="button2" onclick="changeHP('duria', -5)">-5</button>
+                        <button id="duriaDMG10" class="button2" onclick="changeHP('duria', -10)">-10</button>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="duriaAC" class="box"></div>
+                        <div id="duriaSPD" class="box"></div>
+                        <div id="duriaINI" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">AC</div>
+                        <div class="textColumn">SPD</div>
+                        <div class="textColumn">INI</div>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="duriaSTR" class="box"></div>
+                        <div id="duriaDEX" class="box"></div>
+                        <div id="duriaCON" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">STR</div>
+                        <div class="textColumn">DEX</div>
+                        <div class="textColumn">CON</div>
+                    </div>
+                    <div class="row">
+                        <div id="duriaINT" class="box"></div>
+                        <div id="duriaWIS" class="box"></div>
+                        <div id="duriaCHA" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">INT</div>
+                        <div class="textColumn">WIS</div>
+                        <div class="textColumn">CHA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="textColumn"><!-- Hood's stat column -->
+                <div class="outBox">Hood</div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="hoodHP" class="hpBox"></div><!-- Hood's HP box -->
+                        <button id="hoodHEAL1" class="button1" onclick="changeHP('hood', 1)">+1</button>
+                        <button id="hoodHEAL5" class="button1" onclick="changeHP('hood', 5)">+5</button>
+                        <button id="hoodHEAL10" class="button1" onclick="changeHP('hood', 10)">+10</button>
+                        <button id="hoodDMG1" class="button2" onclick="changeHP('hood', -1)">-1</button>
+                        <button id="hoodDMG5" class="button2" onclick="changeHP('hood', -5)">-5</button>
+                        <button id="hoodDMG10" class="button2" onclick="changeHP('hood', -10)">-10</button>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="hoodAC" class="box"></div>
+                        <div id="hoodSPD" class="box"></div>
+                        <div id="hoodINI" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">AC</div>
+                        <div class="textColumn">SPD</div>
+                        <div class="textColumn">INI</div>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="hoodSTR" class="box"></div>
+                        <div id="hoodDEX" class="box"></div>
+                        <div id="hoodCON" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">STR</div>
+                        <div class="textColumn">DEX</div>
+                        <div class="textColumn">CON</div>
+                    </div>
+                    <div class="row">
+                        <div id="hoodINT" class="box"></div>
+                        <div id="hoodWIS" class="box"></div>
+                        <div id="hoodCHA" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">INT</div>
+                        <div class="textColumn">WIS</div>
+                        <div class="textColumn">CHA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="textColumn"><!-- Sanzor's stat column -->
+                <div class="outBox">Sanzor Barbero</div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="sanzorHP" class="hpBox"></div><!-- Sanzor's HP box -->
+                        <button id="sanzorHEAL1" class="button1" onclick="changeHP('sanzor', 1)">+1</button>
+                        <button id="sanzorHEAL5" class="button1" onclick="changeHP('sanzor', 5)">+5</button>
+                        <button id="sanzorHEAL10" class="button1" onclick="changeHP('sanzor', 10)">+10</button>
+                        <button id="sanzorDMG1" class="button2" onclick="changeHP('sanzor', -1)">-1</button>
+                        <button id="sanzorDMG5" class="button2" onclick="changeHP('sanzor', -5)">-5</button>
+                        <button id="sanzorDMG10" class="button2" onclick="changeHP('sanzor', -10)">-10</button>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="sanzorAC" class="box"></div>
+                        <div id="sanzorSPD" class="box"></div>
+                        <div id="sanzorINI" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">AC</div>
+                        <div class="textColumn">SPD</div>
+                        <div class="textColumn">INI</div>
+                    </div>
+                </div>
+                <div class="outBox">
+                    <div class="row">
+                        <div id="sanzorSTR" class="box"></div>
+                        <div id="sanzorDEX" class="box"></div>
+                        <div id="sanzorCON" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">STR</div>
+                        <div class="textColumn">DEX</div>
+                        <div class="textColumn">CON</div>
+                    </div>
+                    <div class="row">
+                        <div id="sanzorINT" class="box"></div>
+                        <div id="sanzorWIS" class="box"></div>
+                        <div id="sanzorCHA" class="box"></div>
+                    </div>
+                    <div class="row">
+                        <div class="textColumn">INT</div>
+                        <div class="textColumn">WIS</div>
+                        <div class="textColumn">CHA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
